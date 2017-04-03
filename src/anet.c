@@ -298,6 +298,7 @@ static int anetTcpGenericConnect(char *err, char *addr, int port,
                 anetSetError(err, "%s", gai_strerror(rv));
                 goto error;
             }
+            /* su: why bind is done on another servinfo */
             for (b = bservinfo; b != NULL; b = b->ai_next) {
                 if (bind(s,b->ai_addr,b->ai_addrlen) != -1) {
                     bound = 1;

@@ -251,6 +251,7 @@ uint32_t digits10(uint64_t v) {
     return 12 + digits10(v / 1000000000000UL);
 }
 
+/* su: awesome!!! */
 /* Like digits10() but for signed values. */
 uint32_t sdigits10(int64_t v) {
     if (v < 0) {
